@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Persona from './persona/persona';
+import Persona from './persona/Persona';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Pixel_perfect from './pixel-perfect/Pixel_perfect';
 
