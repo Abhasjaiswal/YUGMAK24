@@ -10,12 +10,12 @@ function CurtainAnimation({ onComplete }) {
       setIsOpen(true);
       setTimeout(() => {
         onComplete();
-      }, 1000); // Duration curtain opening animation
+      }, 2000); // Duration curtain opening animation
     }, 1000); // Delay before animation
   }, [onComplete]);
 
   return (
-    <div className={`curtain-container ${isOpen ? 'open' : ''}`}>
+    <div className={`curtain-container ${isOpen ? 'open' : ''} bg-gradient-to-r from-[#900C3F] via-[#A3002E] via-[#DD3A03] to-[#F9E12F]`}>
       <div className="curtain curtain-left"></div>
       <div className="curtain curtain-right"></div>
     </div>
