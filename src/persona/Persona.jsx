@@ -5,7 +5,7 @@ import bgImage from "./bg.png";
 const Persona = () => {
   return (
     <main className="main">
-      <section className="sec-banner pt-lg-7 position-relative">
+      <section className="sec-banner ml-auto mr-auto pt-lg-7 position-relative">
         <div className="row langual mx-0">
           <a href="https://lollypop.design">
             <img
@@ -22,6 +22,26 @@ const Persona = () => {
             </noscript>
           </a>
         </div>
+        <div className="container max-w-5xl     ml-auto mr-auto">
+          <div className="row  d-flex justify-content-center">
+            <div className="col-12 text-center logo px-0">
+              <img
+                className="img-fluid lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/lollypop.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/lollypop.svg
+                alt=logo&gt;
+              </noscript>
+            </div>
+            <div className="col-10 col-lg-5 text-center mt-3 px-0">
+              <img
+                className="img-fluid logo-fix lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/logo_designathon24.png"
         <div className="container">
           <div className="row d-flex justify-content-center">
             <div className="col-10 col-lg-5 text-center mt-3 px-0">

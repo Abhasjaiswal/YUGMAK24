@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import PixelPerfect from './pixel-perfect/Pixel_perfect'; 
-import Persona from './persona/Persona'; 
+import Persona from './Persona/Persona'; 
 function App() {
   
   return (
