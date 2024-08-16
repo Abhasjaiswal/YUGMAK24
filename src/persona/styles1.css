@@ -418,7 +418,7 @@ body {
 }
 
 .sec-banner {
-    background-image: radial-gradient(#F9E12F, #DD3A03, #A3002E, #900C3F);
+    background-image: linear-gradient(#F9E12F, #DD3A03);
     background-size: contain;
 	content: "";
 	top: 0;

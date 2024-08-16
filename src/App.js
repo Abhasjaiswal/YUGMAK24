@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CurtainAnimation from './CurtainAnimation';
 import PixelPerfect from './pixel-perfect/Pixel_perfect'; 
 import Persona from './persona/Persona'; 
-
 function App() {
   const [isCurtainOpen, setIsCurtainOpen] = useState(false);
 

@@ -1,5 +1,6 @@
 import React from 'react'
 import "./styles1.css";
+import bgImage from './bg.png';
 
 const Persona = () => {
   return (
@@ -23,24 +24,11 @@ const Persona = () => {
     </div>
     <div className="container">
       <div className="row d-flex justify-content-center">
-        <div className="col-12 text-center logo px-0">
-          <img
-            className="img-fluid lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/lollypop.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/lollypop.svg
-            alt=logo&gt;
-          </noscript>
-        </div>
+        
         <div className="col-10 col-lg-5 text-center mt-3 px-0">
           <img
             className="img-fluid logo-fix lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/logo_designathon24.png"
+            src= {bgImage}
             alt="logo"
             data-ll-status="loaded"
           />
@@ -54,7 +42,7 @@ const Persona = () => {
         <div className="col-12 text-center d-flex justify-content-center mt-title">
           <h3 className="col-12 col-lg-7 fnt-700 fnt-title text-uppercase clr-yellow-brown mb-0">
             The <span className="clr-orange">ULTIMATE</span> Design Hackathon is
-            back!
+            HERE!
           </h3>
         </div>
         <div className="col-12 text-center d-flex justify-content-center mt-content">
@@ -73,8 +61,8 @@ const Persona = () => {
                   Date
                 </p>
                 <p className="clr-white fnt-banner-20 fnt-700 fnt-switzer txt-flex-mobile">
-                  3rd - 4th{" "}
-                  <span className="text-uppercase fnt-sm-14">May</span>
+                  TBD{" "}
+                  <span className="text-uppercase fnt-sm-14"></span>
                 </p>
                 <div className="v-line" />
               </div>
@@ -120,7 +108,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -136,7 +124,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -152,7 +140,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -168,7 +156,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -184,7 +172,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -200,7 +188,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -216,7 +204,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -232,7 +220,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
       </div>
       <div className="leftToRight" style={{ marginLeft: 32 }}>
@@ -250,7 +238,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -266,7 +254,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -282,7 +270,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -298,7 +286,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -314,7 +302,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -330,7 +318,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -346,7 +334,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
         <div className="top-item-text">
           <img
@@ -362,7 +350,7 @@ const Persona = () => {
             data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
             alt=logo&gt;
           </noscript>
-          <span className="text-top-line">Registration closed April 14!</span>
+          <span className="text-top-line">Registrations Opening Soon!</span>
         </div>
       </div>
     </div>
