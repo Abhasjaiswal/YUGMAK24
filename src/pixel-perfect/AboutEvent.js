@@ -6,6 +6,7 @@ function AboutEvent() {
             <div className='text-center text-6xl font-extrabold  font-Dancing'>
                 <h1>About Picture Perfect</h1>
             </div>
+            <div></div>
         </div>
     )
 }
