@@ -1,382 +1,47 @@
-import React from 'react'
+import React from "react";
 import "./styles1.css";
-import bgImage from './bg.png';
+import bgImage from "./bg.png";
 
 const Persona = () => {
   return (
     <main className="main">
-  <section className="sec-banner pt-lg-7 position-relative">
-    <div className="row langual mx-0">
-      <a href="https://lollypop.design">
-        <img
-          className="img-fluid logo-img lazyloaded"
-          src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/llp.svg"
-          alt="logo"
-          data-ll-status="loaded"
-        />
-        <noscript>
-          &lt;img class="img-fluid logo-img lazy"
-          src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-          data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/llp.svg
-          alt=logo&gt;
-        </noscript>
-      </a>
-    </div>
-    <div className="container">
-      <div className="row d-flex justify-content-center">
-        
-        <div className="col-10 col-lg-5 text-center mt-3 px-0">
-          <img
-            className="img-fluid logo-fix lazyloaded"
-            src= {bgImage}
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid logo-fix lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/logo_designathon24.png
-            alt=logo&gt;
-          </noscript>
+      <section className="sec-banner pt-lg-7 position-relative">
+        <div className="row langual mx-0">
+          <a href="https://lollypop.design">
+            <img
+              className="img-fluid logo-img lazyloaded"
+              src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/llp.svg"
+              alt="logo"
+              data-ll-status="loaded"
+            />
+            <noscript>
+              &lt;img class="img-fluid logo-img lazy"
+              src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+              data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/llp.svg
+              alt=logo&gt;
+            </noscript>
+          </a>
         </div>
-        <div className="col-12 text-center d-flex justify-content-center mt-title">
-          <h3 className="col-12 col-lg-7 fnt-700 fnt-title text-uppercase clr-yellow-brown mb-0">
-            The <span className="clr-orange">ULTIMATE</span> Design Hackathon is
-            HERE!
-          </h3>
-        </div>
-        <div className="col-12 text-center d-flex justify-content-center mt-content">
-          <p className="col-12 col-lg-7 clr-white fnt-400 fnt-switzer fnt-content mb-0 op-80">
-            Unleash your inner design passion at our action-packed design
-            hackathon! Meet fellow creative minds, ignite ideas, and conquer
-            real-world challenges — all within a mere 24 hours!
-          </p>
-        </div>
-        <div className="col-8 col-lg-3 text-center d-flex justify-content-center mt-btn" />
-        <div className="row d-flex justify-content-center pt-56">
-          <div className="col-12 col-lg-7">
-            <div className="row">
-              <div className="col-4 d-flex flex-column text-lg-center text-start">
-                <p className="clr-orange text-uppercase fnt-banner-14 fnt-600 fnt-switzer lh-0 mb-2">
-                  Date
-                </p>
-                <p className="clr-white fnt-banner-20 fnt-700 fnt-switzer txt-flex-mobile">
-                  TBD{" "}
-                  <span className="text-uppercase fnt-sm-14"></span>
-                </p>
-                <div className="v-line" />
-              </div>
-              <div className="col-4 d-flex flex-column text-lg-center text-start">
-                <p className="clr-orange text-uppercase fnt-banner-14 fnt-600 lh-0 fnt-switzer mb-2">
-                  Duration
-                </p>
-                <p className="clr-white text-uppercase fnt-banner-20 fnt-700 fnt-switzer banner_duration">
-                  24
-                  <span className="fnt-sm-14">Hours</span>
-                </p>
-                <div className="v-line" />
-              </div>
-              <div className="col-4 d-flex flex-column text-lg-center text-start">
-                <p className="clr-orange text-uppercase fnt-banner-14 fnt-600 lh-0 fnt-switzer mb-2">
-                  Designers
-                </p>
-                <p className="clr-white text-uppercase fnt-banner-20 fnt-700 fnt-switzer">
-                  200+ <span className="fnt-sm-14">Participants</span>
-                </p>
-                <div className="v-line" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <div className="top-banner">
-    <div className="top-line">
-      <div className="leftToRight">
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-      </div>
-      <div className="leftToRight" style={{ marginLeft: 32 }}>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
-            src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-            alt="logo"
-            data-ll-status="loaded"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-            alt="logo"
-            data-lazy-src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-            alt="logo"
-            data-lazy-src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-        <div className="top-item-text">
-          <img
-            className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
-            alt="logo"
-            data-lazy-src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
-          />
-          <noscript>
-            &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
-            img-top-line lazy"
-            src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
-            data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
-            alt=logo&gt;
-          </noscript>
-          <span className="text-top-line">Registrations Opening Soon!</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <section className="section-04cities">
-    <div className="container">
-      <div className="row d-flex justify-content-center cities-height">
-        <div className="col-12 col-md-5 col-lg-5 text-center d-flex flex-column">
-          <div className="cities-wrapper">
-            <h3 className="fnt-cities text-uppercase fnt-clash fnt-700">
-              Cities
-            </h3>
-            <div className="cities">
-              <h3 className="fnt-clash clr-darkblue text-uppercase fnt-130 fnt-700">
-                02
-              </h3>
-              <h3 className="fnt-26 clr-orange fnt-700 text-uppercase cities-sm">
-                Cities
-              </h3>
-
-
+        <div className="container">
+          <div className="row d-flex justify-content-center">
+            <div className="col-10 col-lg-5 text-center mt-3 px-0">
+              <img
+                className="img-fluid logo-fix lazyloaded"
+                src={bgImage}
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid logo-fix lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/logo_designathon24.png
+                alt=logo&gt;
+              </noscript>
             </div>
             <div className="col-12 text-center d-flex justify-content-center mt-title">
               <h3 className="col-12 col-lg-7 fnt-700 fnt-title text-uppercase clr-yellow-brown mb-0">
                 The <span className="clr-orange">ULTIMATE</span> Design
-                Hackathon is back!
+                Hackathon is HERE!
               </h3>
             </div>
             <div className="col-12 text-center d-flex justify-content-center mt-content">
@@ -395,8 +60,7 @@ const Persona = () => {
                       Date
                     </p>
                     <p className="clr-white fnt-banner-20 fnt-700 fnt-switzer txt-flex-mobile">
-                      3rd - 4th{" "}
-                      <span className="text-uppercase fnt-sm-14">May</span>
+                      TBD <span className="text-uppercase fnt-sm-14"></span>
                     </p>
                     <div className="v-line" />
                   </div>
@@ -418,6 +82,341 @@ const Persona = () => {
                       200+ <span className="fnt-sm-14">Participants</span>
                     </p>
                     <div className="v-line" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="top-banner">
+        <div className="top-line">
+          <div className="leftToRight">
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-block d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-block d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+          </div>
+          <div className="leftToRight" style={{ marginLeft: 32 }}>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line lazyloaded"
+                src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+                alt="logo"
+                data-ll-status="loaded"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                alt="logo"
+                data-lazy-src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                alt="logo"
+                data-lazy-src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+            <div className="top-item-text">
+              <img
+                className="img-fluid d-sm-bloc d-md-block d-lg-block img-top-line"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%200%200'%3E%3C/svg%3E"
+                alt="logo"
+                data-lazy-src="https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg"
+              />
+              <noscript>
+                &lt;img class="img-fluid d-sm-bloc d-md-block d-lg-block
+                img-top-line lazy"
+                src="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201%201'%3E%3C/svg%3E"
+                data-src=https://lollypop.design/wp-content/themes/lollypop/assets/images/designathon2024/check_top.svg
+                alt=logo&gt;
+              </noscript>
+              <span className="text-top-line">Registrations Opening Soon!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className="section-04cities">
+        <div className="container">
+          <div className="row d-flex justify-content-center cities-height">
+            <div className="col-12 col-md-5 col-lg-5 text-center d-flex flex-column">
+              <div className="cities-wrapper">
+                <h3 className="fnt-cities text-uppercase fnt-clash fnt-700">
+                  Cities
+                </h3>
+                <div className="cities">
+                  <h3 className="fnt-clash clr-darkblue text-uppercase fnt-130 fnt-700">
+                    02
+                  </h3>
+                  <h3 className="fnt-26 clr-orange fnt-700 text-uppercase cities-sm">
+                    Cities
+                  </h3>
+                </div>
+                <div className="col-12 text-center d-flex justify-content-center mt-title">
+                  <h3 className="col-12 col-lg-7 fnt-700 fnt-title text-uppercase clr-yellow-brown mb-0">
+                    The <span className="clr-orange">ULTIMATE</span> Design
+                    Hackathon is back!
+                  </h3>
+                </div>
+                <div className="col-12 text-center d-flex justify-content-center mt-content">
+                  <p className="col-12 col-lg-7 clr-white fnt-400 fnt-switzer fnt-content mb-0 op-80">
+                    Unleash your inner design passion at our action-packed
+                    design hackathon! Meet fellow creative minds, ignite ideas,
+                    and conquer real-world challenges — all within a mere 24
+                    hours!
+                  </p>
+                </div>
+                <div className="col-8 col-lg-3 text-center d-flex justify-content-center mt-btn" />
+                <div className="row d-flex justify-content-center pt-56">
+                  <div className="col-12 col-lg-7">
+                    <div className="row">
+                      <div className="col-4 d-flex flex-column text-lg-center text-start">
+                        <p className="clr-orange text-uppercase fnt-banner-14 fnt-600 fnt-switzer lh-0 mb-2">
+                          Date
+                        </p>
+                        <p className="clr-white fnt-banner-20 fnt-700 fnt-switzer txt-flex-mobile">
+                          3rd - 4th{" "}
+                          <span className="text-uppercase fnt-sm-14">May</span>
+                        </p>
+                        <div className="v-line" />
+                      </div>
+                      <div className="col-4 d-flex flex-column text-lg-center text-start">
+                        <p className="clr-orange text-uppercase fnt-banner-14 fnt-600 lh-0 fnt-switzer mb-2">
+                          Duration
+                        </p>
+                        <p className="clr-white text-uppercase fnt-banner-20 fnt-700 fnt-switzer banner_duration">
+                          24
+                          <span className="fnt-sm-14">Hours</span>
+                        </p>
+                        <div className="v-line" />
+                      </div>
+                      <div className="col-4 d-flex flex-column text-lg-center text-start">
+                        <p className="clr-orange text-uppercase fnt-banner-14 fnt-600 lh-0 fnt-switzer mb-2">
+                          Designers
+                        </p>
+                        <p className="clr-white text-uppercase fnt-banner-20 fnt-700 fnt-switzer">
+                          200+ <span className="fnt-sm-14">Participants</span>
+                        </p>
+                        <div className="v-line" />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1511,4 +1510,4 @@ const Persona = () => {
   );
 };
 
-export default Persona
+export default Persona;
