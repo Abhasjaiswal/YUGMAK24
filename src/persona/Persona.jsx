@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Landing from '../Persona/Landing/Landing';
-import Events from '../Persona/Events/Events';
-import Participate from '../Persona/Participate/Participate';
-import Video from '../Persona/VideoPart/Video';
-import FAQ from '../Persona/FAQ/Faq';
-import Venue from '../Persona/Venue/Venue';
-import Registration from '../Persona/Register/Register';
-import Rules from '../Persona/Rules/Rules';
-import Partner from '../Persona/Partner/Partner';
+import Landing from './Landing/Landing';
+import Events from './Events/Events';
+import Participate from './Participate/Participate';
+import Video from './VideoPart/Video';
+import FAQ from './FAQ/Faq';
+import Venue from './Venue/Venue';
+import Registration from './Register/Register';
+import Rules from './Rules/Rules';
+import Partner from './Partner/Partner';
 const Persona = () => {
   return (
     <div>
