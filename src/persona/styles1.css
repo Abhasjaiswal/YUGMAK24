@@ -1563,14 +1563,13 @@ a{color:#fff !important}.link-dribble{-webkit-transition: .2s ease-in-out;-o-tra
     left: 25px;
   }
 
-   
   
   /* Make the large image responsive */
   .img-fluid.logo-fix.lazyloaded {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 100%;
+    width: 55vh;
     max-width: 500px; /* Set a reasonable max width */
   }
   
@@ -1590,7 +1589,7 @@ a{color:#fff !important}.link-dribble{-webkit-transition: .2s ease-in-out;-o-tra
   
     /* Adjust the large image for smaller screens */
     .img-fluid.logo-fix.lazyloaded {
-      max-width: 300px; /* Reduce the max-width on smaller screens */
+      max-width: 45vh; /* Reduce the max-width on smaller screens */
     }
   }
   
@@ -1607,7 +1606,7 @@ a{color:#fff !important}.link-dribble{-webkit-transition: .2s ease-in-out;-o-tra
     }
   
     .img-fluid.logo-fix.lazyloaded {
-      max-width: 250px; /* Further reduce the max-width */
+      max-width: 45vh; /* Further reduce the max-width */
     }
   }
   
@@ -1703,7 +1702,7 @@ a{color:#fff !important}.link-dribble{-webkit-transition: .2s ease-in-out;-o-tra
 
 .heading {
   font-size: 36px;
-  color: #073763;
+  color: #02323E;  
   font-weight: bold;
 }
 
@@ -1837,4 +1836,11 @@ a{color:#fff !important}.link-dribble{-webkit-transition: .2s ease-in-out;-o-tra
   .image-3 {
 	transform: rotate(10deg);
   }
-  
+
+  .p-10{
+	padding: 3.5rem;
+  }
+
+
+  html {
+    overflow-x: hidden; }
