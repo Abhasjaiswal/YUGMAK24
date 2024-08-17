@@ -5,6 +5,7 @@ import CurtainAnimation from './CurtainAnimation.js';
 import i1 from './Pixel_Perfect_Images/Yugmak_logo.png'
 
 import Guideline from './Guideline.js';
+
 const PixelPerfect = () => {
   const [isCurtainComplete, setIsCurtainComplete] = useState(false);
 
@@ -18,18 +19,17 @@ const PixelPerfect = () => {
 
   return (
     <div className=" w-screen h-screen ">
-      <div className="flex flex-col items-center font-Poppins text-white bg-gradient-to-t from-[#be225e] from-[10%] via-[#A3002E]via-[20%] via-[#DD3A03] via-[30%] to-[#F9E12F] to-80%">
-        <div className="w-full max-w-sm m-10 mt-4 mb-6 flex flex-col items-center relative ">
+      <div className="flex flex-col items-center font-Poppins text-white bg-gradient-to-b from-[#F9E12F] from-[20%] to-[#DD3A03] to-[90%] ">
+        <div className="w-full max-w-sm m-10   mb-6 flex flex-col items-center relative ">
           <img
             src={i1}
             alt="logo"
             className="w-full h-auto  "
           />
-          <h1 className="font-bold text-4xl md:text-6xl text-center mb-1  absolute top-[280px]">
           <h1 className="font-clash-grotesk text-4xl md:text-6xl text-center mb-1 z-10  absolute top-[280px]">
             Presents
           </h1>
-          <h2 className="font-semibold text-xl md:text-2xl text-center absolute top-[330px] md:top-[350px]">
+          <h2 className="font-semibold font-clash-grotesk text-xl md:text-2xl text-center absolute top-[330px] md:top-[350px]">
             Pixel Perfect
           </h2>
         </div>
