@@ -18,3 +18,10 @@ code {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Clash Grotesk';
+  src: url('./assets/ClashGrotesk-Bold.otf') format('opentype');
+  font-weight: 700; /* Bold weight */
+  font-style: normal;
+}

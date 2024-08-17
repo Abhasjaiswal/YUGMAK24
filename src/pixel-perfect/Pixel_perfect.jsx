@@ -26,6 +26,7 @@ const PixelPerfect = () => {
             className="w-full h-auto  "
           />
           <h1 className="font-bold text-4xl md:text-6xl text-center mb-1  absolute top-[280px]">
+          <h1 className="font-clash-grotesk text-4xl md:text-6xl text-center mb-1 z-10  absolute top-[280px]">
             Presents
           </h1>
           <h2 className="font-semibold text-xl md:text-2xl text-center absolute top-[330px] md:top-[350px]">
