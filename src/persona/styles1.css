@@ -1562,14 +1562,8 @@ a{color:#fff !important}.link-dribble{-webkit-transition: .2s ease-in-out;-o-tra
     top: 25px;
     left: 25px;
   }
-  
-  /* Make the small image responsive
-  .img-fluid.lazyloaded {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 20px; /* Small size */
-   */
+
+   
   
   /* Make the large image responsive */
   .img-fluid.logo-fix.lazyloaded {
