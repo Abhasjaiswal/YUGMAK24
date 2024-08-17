@@ -3,7 +3,6 @@ import './pixcel_perfect.css';
 import AboutEvent from './AboutEvent';
 import CurtainAnimation from './CurtainAnimation.js';
 import i1 from './Pixel_Perfect_Images/Yugmak_logo.png'
-
 import Guideline from './Guideline.js';
 
 const PixelPerfect = () => {
@@ -42,7 +41,7 @@ const PixelPerfect = () => {
         </div>
 
         <div className="mt-6">
-          <button className="px-6 py-3 mb-12 bg-gradient-to-r from-[#be4164] to-[#ad5a3e] hover:from-[#902e53] hover:to-[#cd5f3d] hover:scale-[0.95] transition-transform duration-200 rounded-xl text-white text-lg md:text-xl">
+          <button className="px-6 py-3 mb-12 bg-gradient-to-r from-[#F9E12F] via-[#d1a336] to-[#DD3A03] hover:from-[#FBE34E] to-[#c04d1f] hover:scale-[0.95] transition-transform duration-200 rounded-xl text-white text-lg md:text-xl">
             Register Now
           </button>
         </div>
@@ -55,6 +54,7 @@ const PixelPerfect = () => {
       <div className='w-screen h-screen bg-[#F299A0] '>
         <Guideline/>
       </div>
+
     </div>
   );
 };

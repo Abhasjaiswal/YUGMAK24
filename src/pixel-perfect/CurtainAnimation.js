@@ -15,7 +15,7 @@ function CurtainAnimation({ onComplete }) {
   }, [onComplete]);
 
   return (
-    <div className={`curtain-container ${isOpen ? 'open' : ''} bg-gradient-to-r from-[#900C3F] via-[#A3002E] via-[#DD3A03] to-[#F9E12F]`}>
+    <div className={`curtain-container ${isOpen ? 'open' : ''} bg-gradient-to-b from-[#F9E12F] from-[20%] to-[#DD3A03] to-[90%] `}>
       <div className="curtain curtain-left"></div>
       <div className="curtain curtain-right"></div>
     </div>
