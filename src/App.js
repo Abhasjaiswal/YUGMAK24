@@ -3,7 +3,8 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import PixelPerfect from './pixel-perfect/Pixel_perfect'; 
-import Persona from './Persona/Persona'; 
+// import Persona from './persona/Persona'; 
+
 function App() {
   
   return (
@@ -12,7 +13,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             {/* <Route path="/" element={<Home />} /> */}
-            <Route path="/persona" element={<Persona />} />
+            {/* <Route path="/persona" element={<Persona />} /> */}
             <Route path='/pixel-perfect' element={<PixelPerfect />} />
           </Routes>
         </BrowserRouter>
