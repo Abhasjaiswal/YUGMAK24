@@ -25,7 +25,7 @@ const PixelPerfect = () => {
           <img
             src={i1}
             alt="logo"
-            className="w-full h-auto  "
+            className="w-full h-auto   "
           />
           <h1 className="font-clash-grotesk text-4xl md:text-6xl text-center mb-1 z-10  absolute top-[280px]">
             Presents
@@ -43,13 +43,13 @@ const PixelPerfect = () => {
         </div>
 
         <div className="mt-6">
-          <button className="px-6 py-3 mb-12 bg-gradient-to-r from-[#be4164] to-[#ad5a3e] hover:from-[#902e53] hover:to-[#cd5f3d] hover:scale-[0.95] transition-transform duration-200 rounded-xl text-white text-lg md:text-xl">
+          <button className="px-6 py-3 mb-12 bg-gradient-to-r from-[#dec821] from-[20%] to-[#DD3A03] to-[80%] hover:from-[#DD3A03] hover:to-[#F9E12F] hover:scale-[0.95] transition-transform duration-200 rounded-xl text-white text-lg md:text-xl">
             Register Now
           </button>
         </div>
       </div>
 
-      <div className="w-screen h-screen  bg-[#F2BBB6]">
+      <div className="w-screen h-fit  bg-[#F2BBB6]">
         <AboutEvent />
       </div>
 

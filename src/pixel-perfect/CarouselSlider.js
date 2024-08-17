@@ -94,7 +94,7 @@ const images = [
   
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-container ">
       <div className='text-6xl md:text-6xl font-bold text-center mb-10 font-clash-grotesk'>
         <h1>Themes</h1>
       </div>
