@@ -68,7 +68,7 @@
     cursor: pointer;
     border-radius: 50%;
     z-index: 10;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
   }
   
   .arrow-left {

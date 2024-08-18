@@ -7,7 +7,7 @@ import './CarouselSlider.css';
 const NextArrow = (props) => {
   const { onClick } = props;
   return (
-    <div className="arrow arrow-right" onClick={onClick}>
+    <div className="arrow arrow-right hover:scale-110 transition-transform duration-500" onClick={onClick}>
       &gt;
     </div>
   );
@@ -16,13 +16,13 @@ const NextArrow = (props) => {
 const PrevArrow = (props) => {
   const { onClick } = props;
   return (
-    <div className="arrow arrow-left" onClick={onClick}>
+    <div className="arrow arrow-left hover:scale-110 transition-transform duration-500" onClick={onClick}>
       &lt;
     </div>
   );
 }
 
-const CarouselSlider = ({ title }) => { // Accept title as a prop
+const CarouselSlider = ({ title }) => {
   const settings = {
     centerMode: true,
     centerPadding: '0',
@@ -62,18 +62,16 @@ const CarouselSlider = ({ title }) => { // Accept title as a prop
     ]
   };
 
-  
-
-const images = [
+  const images = [
     {
       title: "Environment",
       description: "The environment is our shared home; protecting it ensures a sustainable future for all.",
       url: "https://i.pinimg.com/564x/1f/de/41/1fde41d038a3fe7940d1c6640707bdf7.jpg"
-      },
+    },
     {
       title: "Innovation",
       description: "Innovation is the driving force behind progress, turning challenges into opportunities and dreams into tangible solutions.",
-      url:"https://i.pinimg.com/236x/63/72/f3/6372f37f6f6b0c33d553c4770238cc11.jpg"
+      url: "https://i.pinimg.com/236x/63/72/f3/6372f37f6f6b0c33d553c4770238cc11.jpg"
     },
     {
       title: "Technology",
@@ -91,7 +89,6 @@ const images = [
       url: "https://i.pinimg.com/236x/47/8d/4f/478d4f22a0d7ab798f4394af7c93cf62.jpg"
     }
   ];
-  
 
   return (
     <div className="carousel-container ">
@@ -100,9 +97,9 @@ const images = [
       </div>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className="slide">
-            <img src={image.url} alt={image.title} />
-            <div className="caption">
+          <div key={index} className="slide transition-transform duration-700 transform hover:scale-105">
+            <img className="image-zoom" src={image.url} alt={image.title} />
+            <div className="caption transition-opacity duration-700 transform translate-y-4 opacity-100 hover:translate-y-0 overflow-x-hidden">
               <h3>{image.title}</h3>
               <p>{image.description}</p>
             </div>

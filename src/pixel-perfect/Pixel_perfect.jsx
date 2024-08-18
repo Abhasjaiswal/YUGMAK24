@@ -56,7 +56,7 @@ const PixelPerfect = () => {
         <CarouselSlider/>
       </div>
 
-      <div className='w-screen h-screen bg-[#F299A0] '>
+      <div className='w-screen h-fit bg-[#F299A0] '>
         <Guideline/>
       </div>
       <div className='w-screen h-screen  bg-[#F2BBB6]'>
