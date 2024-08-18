@@ -1,7 +1,5 @@
 import React from 'react'
 import "../styles1.css";
-import Logo from "../bg.png"
-
 const Landing = () => {
   return (
     <main className="main">
