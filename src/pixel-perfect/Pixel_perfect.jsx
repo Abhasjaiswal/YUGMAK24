@@ -5,7 +5,7 @@ import CurtainAnimation from './CurtainAnimation.js';
 import i1 from './Pixel_Perfect_Images/Yugmak_logo.png'
 import Guideline from './Guideline.js';
 import CarouselSlider from './CarouselSlider.js';
-
+import Timeline from './Timeline.jsx';
 const PixelPerfect = () => {
   const [isCurtainComplete, setIsCurtainComplete] = useState(false);
 
@@ -59,7 +59,9 @@ const PixelPerfect = () => {
       <div className='w-screen h-screen bg-[#F299A0] '>
         <Guideline/>
       </div>
-
+      <div className='w-screen h-screen  bg-[#F2BBB6]'>
+        <Timeline/>
+      </div>
     </div>
   );
 };

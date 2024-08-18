@@ -1,0 +1,282 @@
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px; /* Added more space between items for a cleaner look */
+    padding: 20px;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); /* Gradient background for subtle depth */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadows for depth */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease; /* Smooth transition for all properties */
+    opacity: 0;
+    transform: translateY(50px) scale(0.95); /* Initial state: slightly scaled down and moved down */
+    will-change: transform, opacity;
+}
+
+.timeline-item.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Scale up and move into place when in view */
+}
+
+.timeline-item:hover {
+    transform: translateY(-10px) scale(1.02); /* Slight lift and scale on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+.timeline-item-content {
+    position: relative;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #ffffff; /* Clean white background */
+    z-index: 2;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item-content:hover {
+    background-color: #f7f7f7; /* Slightly darker background on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Additional shadow for depth on hover */
+}
+
+.timeline-item .circle {
+    position: absolute;
+    top: 50%;
+    left: -60px;
+    width: 30px;
+    height: 30px;
+    background-color: #6c5b7b;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 6px #6c5b7b; /* Ring around the circle */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effects */
+    transform: translateY(-50%);
+}
+
+.timeline-item .circle:hover {
+    transform: scale(1.2); /* Enlarge the circle on hover */
+    background-color: #355c7d; /* Darken the circle on hover */
+    box-shadow: 0 0 0 10px rgba(54, 73, 88, 0.3); /* Larger shadow ring on hover */
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -30px;
+    width: 10px;
+    height: 10px;
+    background-color: #6c5b7b;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Ensures it's behind the circle */
+}
+
+.timeline-item-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #ffffff transparent transparent transparent;
+    transform: translateX(-50%);
+    z-index: 2; /* Adds a triangle pointer to the content box */
+}
+
+.timeline-item.left .circle {
+    left: auto;
+    right: -60px;
+}
+
+.timeline-item.right .circle {
+    left: -60px;
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        margin-bottom: 40px;
+        padding: 20px;
+        background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        border-radius: 12px;
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        box-shadow: none;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        float: none;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .timeline-item.left .circle,
+    .timeline-item.right .circle {
+        left: 20px;
+        right: auto;
+        transform: translateY(-50%);
+    }
+
+    .timeline-item-content {
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 12px;
+    }
+
+    .timeline-item-content::after {
+        display: none;
+    }
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 60px; /* Added more space between items for clarity */
+    padding: 30px;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+    border-radius: 16px; /* Increased border-radius for smoother edges */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12); /* Larger shadow for more depth */
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease-out; /* Smooth, natural transitions */
+    opacity: 0;
+    transform: translateY(60px) scale(0.9); /* Initial state: more pronounced translation and scale */
+    will-change: transform, opacity;
+    overflow: hidden; /* Prevents content overflow */
+}
+
+.timeline-item.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Smoothly transitions to full size and position */
+}
+
+.timeline-item:hover {
+    transform: translateY(-12px) scale(1.03); /* Slightly larger lift and scale on hover */
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2); /* Deeper shadow for more emphasis */
+}
+
+.timeline-item-content {
+    position: relative;
+    padding: 30px;
+    border-radius: 16px;
+    background-color: #ffffff;
+    z-index: 2;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+    overflow: hidden;
+}
+
+.timeline-item-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.1));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.timeline-item-content:hover::before {
+    opacity: 1; /* Subtle gradient overlay on hover for a glow effect */
+}
+
+.timeline-item-content:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) scale(1.02); /* Slight lift and scale for the content itself */
+}
+
+.timeline-item .circle {
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    width: 40px;
+    height: 40px;
+    background-color: #6c5b7b;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 8px rgba(108, 91, 123, 0.3); /* Softer shadow around the circle */
+    transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+    transform: translateY(-50%);
+}
+
+.timeline-item .circle:hover {
+    transform: scale(1.4); /* Slightly larger scale on hover */
+    background-color: #355c7d;
+    box-shadow: 0 0 0 14px rgba(54, 73, 88, 0.4); /* More pronounced shadow on hover */
+}
+
+.timeline-item.left .circle {
+    left: auto;
+    right: -50px;
+}
+
+.timeline-item.right .circle {
+    left: -50px;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    width: 15px;
+    height: 15px;
+    background-color: #6c5b7b;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.timeline-item-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 12px 0 12px;
+    border-color: #ffffff transparent transparent transparent;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timeline-item.left .circle, .timeline-item.right .circle {
+    background: radial-gradient(circle, #ffffff 20%, #6c5b7b 100%);
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        margin-bottom: 40px;
+        padding: 20px;
+        background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+        border-radius: 16px;
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        box-shadow: none;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        float: none;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .timeline-item.left .circle,
+    .timeline-item.right .circle {
+        left: 20px;
+        right: auto;
+        transform: translateY(-50%);
+    }
+
+    .timeline-item-content {
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 16px;
+    }
+
+    .timeline-item-content::after {
+        display: none;
+    }
+}
