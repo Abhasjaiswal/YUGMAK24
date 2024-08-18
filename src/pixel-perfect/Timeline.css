@@ -1,36 +1,74 @@
-/* src/components/Timeline.css */
+/* Global reset to avoid unwanted margins or padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .timeline-container {
     position: relative;
-    margin: 50px auto;
-    padding: 10px 0;
+    margin: 0 auto; /* Center the timeline without top margin */
+    padding: 0; /* Remove padding */
     width: 90%;
     max-width: 1200px;
-  }
-  
-  .timeline-item {
+    overflow: hidden; /* Prevents horizontal overflow issues */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+}
+
+.timeline-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #6c5b7b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+.timeline-heading::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #f8b195;
+    margin: 10px auto 0;
+}
+
+.timeline-item {
     position: relative;
     margin: 20px 0;
     width: 50%;
     padding-left: 50px;
-    opacity: 0; /* Start hidden */
-    transition: opacity 0.6s ease-out; /* Smooth transition for opacity */
-  }
-  
-  .timeline-item.in-view {
-    opacity: 1; /* Fade in when in view */
-  }
-  
-  .timeline-item-content {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(30px) scale(0.95); /* Adds slight scale for a popping effect */
+    will-change: transform, opacity; /* Optimizes performance */
+}
+
+.timeline-item.in-view {
+    opacity: 1;
+    transform: translateY(0) scale(1); /* Smoothly bring to full size when in view */
+}
+
+.timeline-item-content {
     background-color: #f9f9f9;
     padding: 20px;
-    border-radius: 6px;
+    border-radius: 12px;
     position: relative;
     text-align: left;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 2; /* Ensure content is above the line */
-  }
-  
-  .timeline-item .circle {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Increased shadow depth */
+    z-index: 2;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.timeline-item-content:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+    transform: translateY(-5px); /* Slightly lift the item on hover */
+}
+
+.timeline-item .circle {
     position: absolute;
     top: 20px;
     left: -42px;
@@ -39,40 +77,47 @@
     border-radius: 50%;
     background-color: #6c5b7b;
     border: 4px solid white;
-    z-index: 3; /* Ensure circle is above the line */
-  }
-  
-  .timeline-item.left {
+    z-index: 3;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for all properties */
+}
+
+.timeline-item .circle:hover {
+    background-color: #355c7d;
+    transform: scale(1.3); /* Slightly enlarge circle on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Adds shadow to the circle */
+}
+
+.timeline-item.left {
     float: left;
     text-align: right;
     padding-left: 0;
     padding-right: 50px;
-  }
-  
-  .timeline-item.left .timeline-item-content {
+}
+
+.timeline-item.left .timeline-item-content {
     margin-left: 0;
     margin-right: auto;
-  }
-  
-  .timeline-item.left .circle {
+}
+
+.timeline-item.left .circle {
     left: auto;
     right: -42px;
-  }
-  
-  .timeline-item.right {
+}
+
+.timeline-item.right {
     float: right;
-  }
-  
-  .timeline-item.right .timeline-item-content {
+}
+
+.timeline-item.right .timeline-item-content {
     margin-left: auto;
     margin-right: 0;
-  }
-  
-  .timeline-item.right .circle {
+}
+
+.timeline-item.right .circle {
     left: -42px;
-  }
-  
-  .timeline-line-svg {
+}
+
+.timeline-line-svg {
     position: absolute;
     top: 0;
     left: 50%;
@@ -80,12 +125,73 @@
     height: 100%;
     transform: translateX(-50%);
     pointer-events: none;
-    z-index: 1; /* Ensure line is behind the items */
-  }
-  
-  .timeline-item:after {
+    z-index: 1;
+    stroke: #6c5b7b;
+    stroke-width: 4px; /* Increased stroke width for better visibility */
+    stroke-dasharray: 6, 6; /* More pronounced dash effect */
+    animation: dash 2s linear infinite; /* Adds an animated dash effect */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -12; /* Creates the animated movement of the dashed line */
+    }
+}
+
+.timeline-item:after {
     content: '';
     display: table;
     clear: both;
-  }
-  
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        float: none;
+        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .timeline-item.left .circle,
+    .timeline-item.right .circle {
+        left: -15px;
+        right: auto;
+    }
+}
+
+/* Additional Enhancements */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #6c5b7b;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Ensures it's behind the circle */
+}
+
+.timeline-item-content::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: #f9f9f9 transparent transparent transparent;
+    transform: translateX(-50%);
+    z-index: 2; /* Adds a triangle pointer to the content box */
+}
