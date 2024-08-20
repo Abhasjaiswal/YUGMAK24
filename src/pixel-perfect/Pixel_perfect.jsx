@@ -59,7 +59,7 @@ const PixelPerfect = () => {
       <div className='w-screen h-fit bg-[#F299A0] '>
         <Guideline/>
       </div>
-      <div className='w-screen h-screen  bg-[#F2BBB6]'>
+      <div className='w-screen h-fit  bg-[#F2BBB6]'>
         <Timeline/>
       </div>
     </div>

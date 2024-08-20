@@ -131,7 +131,7 @@ const Landing = () => {
                   </h3>
                   <a
                     target="_blank"
-                    href="https://docs.google.com/forms/d/e/1FAIpQLSe4ApRD0fT8a7LPNYxRqbC2w_n8UQooH3bLM0AQCO7CAZtN5Q/viewform"
+                  
                     className="block bg-orange-500 text-white uppercase text-lg py-3 px-6 mt-6 rounded hover:bg-orange-600 transition"
                   >
                     Registration Closed!

@@ -17,7 +17,7 @@ const Persona = () => {
       <div><Venue /></div>
       <div><Registration /></div>
       <div><Events /></div>
-      <div><Rules /></div>
+      <div className='mr-auto ml-auto' ><Rules /></div>
       <div><Video /></div>
       <div><Partner /></div>
       <div><FAQ /></div>
