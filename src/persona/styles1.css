@@ -1775,8 +1775,6 @@ a{color:#fff !important}.link-dribble{-webkit-transition: .2s ease-in-out;-o-tra
 .rules-container {
 	display: flex;
 	justify-content: center;
-	height: 50vh;
-	margin: 3vh;
 	align-items: center;
 	background-color: #073763;
 	padding: 40px;
