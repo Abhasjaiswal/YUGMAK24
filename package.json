@@ -1,5 +1,5 @@
 {
-  "name": "yugmak24",
+  "name": "@your-scope/yugmak24",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -48,5 +48,10 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "tailwind.config.js",
+  "keywords": [],
+  "author": "Your Name",
+  "license": "ISC"
 }

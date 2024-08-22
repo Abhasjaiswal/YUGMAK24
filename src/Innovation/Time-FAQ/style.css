@@ -1,12 +1,12 @@
-.Appp {
+.Appp4 {
     display: flex;
     justify-content: space-evenly;
     padding: 40px;
     flex-wrap: wrap; /* This makes the layout flexible */
   }
   
-  .timeline,
-  .faqs {
+  .timeline4,
+  .faqs4 {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
@@ -14,12 +14,12 @@
     width: 45%;
   }
   
-  .timeline {
+  .timeline4 {
     margin-bottom: 20px; /* Add margin in case of stack */
   }
   
-  .timeline h2,
-  .faqs h2 {
+  .timeline4 h2,
+  .faqs4 h2 {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -31,36 +31,36 @@
     padding: 0;
   }
   
-  .timeline-item {
+  .timeline-item4 {
     display: flex;
     align-items: center;
     padding: 10px 0;
     border-bottom: 1px solid #ddd;
   }
   
-  .timeline-item .icon {
+  .timeline-item4 .icon4 {
     font-size: 30px;
     margin-right: 10px;
   }
   
-  .timeline-item h3 {
+  .timeline-item4 h3 {
     margin: 0;
     font-size: 18px;
     font-weight: bold;
   }
   
-  .timeline-item p {
+  .timeline-item4 p {
     margin: 0;
     font-size: 14px;
     color: #666;
   }
   
-  .faq-item {
+  .faq-item4 {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
   }
   
-  .faq-question {
+  .faq-question4 {
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -68,43 +68,43 @@
     font-size: 16px;
   }
   
-  .faq-answer {
+  .faq-answer4 {
     padding: 10px 0;
     font-size: 14px;
     color: #666;
   }
   
   /* Hover effects */
-  .faq-question:hover {
+  .faq-question4:hover {
     color: #ff6600;
   }
   
   /* Add transition effect to FAQ dropdown */
-  .faq-answer {
+  .faq-answer4 {
     transition: max-height 0.3s ease-out;
   }
   
-  .faq-item span {
+  .faq-item4 span {
     font-size: 20px;
   }
   
   /* Responsive design */
   @media (max-width: 768px) {
-    .Appp {
+    .Appp4 {
       flex-direction: column;
       align-items: center;
     }
   
-    .timeline
+    .timeline4
     {
       width: 100%; /* Make both sections full-width on smaller screens */
     }
-    .faqs {
+    .faqs4 {
       width: 100%; /* Make both sections full-width on smaller screens */
       height: 60vh;
     }
   
-    .timeline {
+    .timeline4 {
       margin-bottom: 20px;
     }
   }

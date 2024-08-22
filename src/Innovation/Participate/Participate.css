@@ -4,28 +4,28 @@
     box-sizing: border-box;
   }
   
-  .why-participate {
+  .why-participate3 {
     text-align: center;
     padding: 50px 20px;
     background-color: #ffffff;
     font-family: 'Arial', sans-serif;
   }
   
-  .heading {
+  .heading3 {
     font-size: 2.5rem;
     font-weight: bold;
     color: #282052;
     margin-bottom: 10px;
   }
   
-  .underline {
+  .underline3 {
     width: 50px;
     height: 3px;
     background-color: #ff6f41;
     margin: 10px auto;
   }
   
-  .grid-container {
+  .grid-container3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Ensures three columns per row */
     gap: 30px;
@@ -33,26 +33,26 @@
     padding-top: 40px;
   }
   
-  .grid-item {
+  .grid-item3 {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 300px;
   }
   
-  .item-image {
+  .item-image3 {
     width: 100%;
     object-fit: cover;
     margin-bottom: 20px;
   }
   
-  .grid-item h3 {
+  .grid-item3 h3 {
     font-size: 1.5rem;
     color: #282052;
     margin-bottom: 10px;
   }
   
-  .grid-item p {
+  .grid-item3 p {
     font-size: 1rem;
     color: #333333;
     text-align: center;
@@ -60,25 +60,25 @@
   
   /* Responsive Design */
   @media (max-width: 1024px) {
-    .grid-container {
+    .grid-container3 {
       grid-template-columns: repeat(2, 1fr); /* Switch to two columns for medium-sized screens */
     }
   }
   
   @media (max-width: 768px) {
-    .grid-container {
+    .grid-container3 {
       grid-template-columns: 1fr; /* Switch to one column for small screens */
     }
   
-    .heading {
+    .heading3 {
       font-size: 2rem;
     }
   
-    .grid-item h3 {
+    .grid-item3 h3 {
       font-size: 1.2rem;
     }
   
-    .grid-item p {
+    .grid-item3 p {
       font-size: 0.9rem;
     }
   }
