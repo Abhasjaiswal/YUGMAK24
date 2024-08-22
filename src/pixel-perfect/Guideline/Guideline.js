@@ -25,7 +25,7 @@ function Guideline() {
   ];
 
   return (
-    <div className='w-screen min-h-screen pt-12 bg-[#F2BBB6]'> 
+    <div className='w-screen min-h-screen py-12 '> 
         <div className='text-6xl md:text-6xl font-bold text-center mb-10 font-clash-grotesk'>
         <h1>Guidelines</h1>
       </div>
