@@ -4,17 +4,17 @@ import Image from './about.svg';
 
 const BusinessPlanPage = () => {
   return (
-    <div className="container">
-      <div className="header"></div>
-      <div className="content">
-        <div className="image">
+    <div className="contain1">
+      <div className="header1"></div>
+      <div className="content1">
+        <div className="image1">
           <img 
             src={Image}
             alt="Placeholder" 
             className="placeholder-img" 
           />
         </div>
-        <div className="text-content">
+        <div className="text-content1">
           <h2>A Business Plan pitching competition</h2>
           <p>
             A Business Plan pitching competition for institute startups,

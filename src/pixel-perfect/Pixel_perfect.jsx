@@ -6,7 +6,6 @@ import Guideline from './Guideline/Guideline.js';
 import CarouselSlider from './Themes/CarouselSlider.js';
 import Timeline from './Timeline/Timeline.jsx';
 import Landing from './Hero/Landing.jsx';
-import Orange from './Orange/Orange.jsx'
 const PixelPerfect = () => {
   // const [isCurtainComplete, setIsCurtainComplete] = useState(false);
 

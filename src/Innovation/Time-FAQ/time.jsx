@@ -5,25 +5,25 @@ function FAQItem({ question, answer }) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="faq-item">
-      <div className="faq-question" onClick={() => setIsOpen(!isOpen)}>
+    <div className="faq-item4">
+      <div className="faq-question4" onClick={() => setIsOpen(!isOpen)}>
         <span>{question}</span>
         <span>{isOpen ? "-" : "+"}</span>
       </div>
-      {isOpen && <div className="faq-answer">{answer}</div>}
+      {isOpen && <div className="faq-answer4">{answer}</div>}
     </div>
   );
 }
 
 function Appp() {
   return (
-    <div className="Appp">
-      <div className="timeline">
+    <div className="Appp4">
+      <div className="timeline4">
         <h2>Timeline</h2>
         <ul>
           <li>
-            <div className="timeline-item">
-              <div className="icon">📝</div>
+            <div className="timeline-item4">
+              <div className="icon4">📝</div>
               <div>
                 <h3>Registration</h3>
                 <p>28th Oct to 1st Nov</p>
@@ -31,8 +31,8 @@ function Appp() {
             </div>
           </li>
           <li>
-            <div className="timeline-item">
-              <div className="icon">📣</div>
+            <div className="timeline-item4">
+              <div className="icon4">📣</div>
               <div>
                 <h3>Announcement of Finalists</h3>
                 <p>2nd Nov</p>
@@ -40,8 +40,8 @@ function Appp() {
             </div>
           </li>
           <li>
-            <div className="timeline-item">
-              <div className="icon">⚡</div>
+            <div className="timeline-item4">
+              <div className="icon4">⚡</div>
               <div>
                 <h3>The Pitch War</h3>
                 <p>4th Nov</p>
@@ -49,8 +49,8 @@ function Appp() {
             </div>
           </li>
           <li>
-            <div className="timeline-item">
-              <div className="icon">🍴</div>
+            <div className="timeline-item4">
+              <div className="icon4">🍴</div>
               <div>
                 <h3>Networking Lunch with VCs</h3>
                 <p>4th Nov</p>
@@ -58,8 +58,8 @@ function Appp() {
             </div>
           </li>
           <li>
-            <div className="timeline-item">
-              <div className="icon">❤️</div>
+            <div className="timeline-item4">
+              <div className="icon4">❤️</div>
               <div>
                 <h3>Inspirit Session</h3>
                 <p>4th Nov</p>
@@ -67,8 +67,8 @@ function Appp() {
             </div>
           </li>
           <li>
-            <div className="timeline-item">
-              <div className="icon">📅</div>
+            <div className="timeline-item4">
+              <div className="icon4">📅</div>
               <div>
                 <h3>Announcement of Results</h3>
                 <p>5th Nov</p>
@@ -78,7 +78,7 @@ function Appp() {
         </ul>
       </div>
 
-      <div className="faqs">
+      <div className="faqs4">
         <h2>FAQs</h2>
         <FAQItem
           question="What is the Entrepreneurship Cell's Startup Hall of Fame?"
