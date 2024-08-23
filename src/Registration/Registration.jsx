@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './style.css';
 import logo from './bg.png';
+import axios from 'axios';
+import { Navigate } from 'react-router-dom';
 
 const RegistrationAndEventSelection = () => {
     const [teamName, setTeamName] = useState('');
@@ -17,6 +19,7 @@ const RegistrationAndEventSelection = () => {
     const [showPage3, setShowPage3] = useState(false);
     const [isPrimeMember, setIsPrimeMember] = useState(false);
     const [primeId, setPrimeId] = useState('');
+    const [teamMembers, setTeamMembers] = useState([]);
 
     const events = [
         { name: 'Drishय', cost: 200 },
@@ -26,14 +29,14 @@ const RegistrationAndEventSelection = () => {
     ];
 
     const handleNext = () => {
-      if (!teamName || !leaderName || !email || !SapId || !degree || !year || !phoneNumber || !altPhoneNumber || !strength || selectedEvents.length === 0 || (isPrimeMember && !primeId)) {
-          alert("Please fill out all the fields and select at least one event before proceeding.");
-          return;
-      }
-      setShowPage2(true);
-  };
-  
-  
+        if (!teamName || !leaderName || !email || !SapId || !degree || !year || !phoneNumber || !altPhoneNumber || !strength || selectedEvents.length === 0 || (isPrimeMember && !primeId)) {
+            alert("Please fill out all the fields and select at least one event before proceeding.");
+            return;
+        }
+        setShowPage2(true);
+    };
+
+
 
     const handleEventChange = (event) => {
         if (event === 'Drishय') {
@@ -73,16 +76,27 @@ const RegistrationAndEventSelection = () => {
     };
 
     const handleSubmit = () => {
-      const numMembers = parseInt(strength, 10) - 1;
-      const allFieldsFilled = formData.slice(0, numMembers).every(member =>
-          Object.values(member).every(value => value !== '')
-      );
-      if (allFieldsFilled) {
-          setShowPage3(true);
-      } else {
-          alert('Please fill out all fields.');
-      }
-  };
+        const numMembers = parseInt(strength, 10) - 1;
+        const allFieldsFilled = formData.slice(0, numMembers).every(member =>
+            Object.values(member).every(value => value !== '')
+        );
+        if (allFieldsFilled) {
+            const team = formData.slice(0, numMembers).map(member => ({
+                name: member.name,
+                SapId: member.SapId,
+                degree: member.degree,
+                year: member.year,
+                phoneNumber: member.field,
+                email: member.email
+            }));
+            
+            // Save teamMembers to state or use it directly
+            setTeamMembers(team);
+            setShowPage3(true);
+        } else {
+            alert('Please fill out all fields.');
+        }
+    };
 
     const handlePrevious = () => {
         if (showPage3) {
@@ -92,12 +106,85 @@ const RegistrationAndEventSelection = () => {
         }
     };
 
-    const handlePay = () => {
+    const handlePay = async () => {
         if (selectedEvents.length === 0) {
             alert('Please select at least one event.');
-        } else {
-            alert('Proceeding to payment...');
-            // Add payment processing logic here
+        }
+        try {
+            const response = await axios.post('http://localhost:8080/api/v1/createOrder', {
+                amount: totalCost,
+                currency: 'INR',
+                receipt: 'receipt#1',
+
+            }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            });
+
+            const { id, amount, key_id, description } = response.data;
+
+            const options = {
+                key: key_id,
+                amount: amount * 100,
+                currency: 'INR',
+                name: 'YUGMAK 2024',
+                description: description,
+                order_id: id,
+                handler: async function (response) {
+                    try {
+                        const verifyResponse = await axios.post('http://localhost:8080/api/v1/verifyPaymentAndSave', {
+                            paymentId: response.razorpay_payment_id,
+                            orderId: response.razorpay_order_id,
+                            teamName: teamName,
+                            leaderName,
+                            email,
+                            sapId: SapId,
+                            degree,
+                            yearOfStudy: year,
+                            phoneNumber,
+                            alternateNumber: altPhoneNumber,
+                            primeMember: isPrimeMember,
+                            selectedEvents: selectedEvents.map((e) => {
+                                return e.name;
+                            }),
+                            strength,
+                            teamMembers,
+                            transactionId: response.razorpay_payment_id,
+                            totalAmount: totalCost,
+                        }, {
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'signature': response.razorpay_signature
+                            },
+                        });
+
+                        if (verifyResponse.data.success) {
+                            alert('Payment successful!');
+
+                        } else {
+                            alert('Payment verification failed. Please contact support.');
+                        }
+                    } catch (verifyError) {
+                        console.log('Error during payment verification:', verifyError.response || verifyError.message || verifyError);
+                        alert('Payment verification failed. Please try again.');
+                    }
+                },
+                prefill: {
+                    name: leaderName,
+                    email: email,
+                    contact: phoneNumber,
+                },
+                theme: {
+                    color: "#3399cc",
+                },
+            };
+
+            const paymentObject = new window.Razorpay(options);
+            paymentObject.open();
+        } catch (error) {
+            console.log('Error during payment:', error.response || error.message || error);
+            alert('Payment failed. Please try again.');
         }
     };
 
@@ -228,47 +315,47 @@ const RegistrationAndEventSelection = () => {
                     </form>
 
                     <div className="form-row">
-                            <label htmlFor="isPrimeMember">Are you a Prime Member?</label>
-                            <div className="radio-group">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="isPrimeMember"
-                                        value="yes"
-                                        checked={isPrimeMember === true}
-                                        onChange={() => setIsPrimeMember(true)}
-                                        required
-                                    />
-                                    <span>Yes</span>
-                                </label>
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="isPrimeMember"
-                                        value="no"
-                                        checked={isPrimeMember === false}
-                                        onChange={() => setIsPrimeMember(false)}
-                                        required
-                                    />
-                                    <span>No</span>
-                                </label>
-                            </div>
-                        </div>
-
-                        {isPrimeMember && (
-                            <div className="form-row">
-                                <label htmlFor="primeId">Prime ID</label>
+                        <label htmlFor="isPrimeMember">Are you a Prime Member?</label>
+                        <div className="radio-group">
+                            <label>
                                 <input
-                                    type="text"
-                                    id="primeId"
-                                    name="primeId"
-                                    placeholder="Enter your Prime ID"
-                                    value={primeId}
-                                    onChange={(e) => setPrimeId(e.target.value)}
+                                    type="radio"
+                                    name="isPrimeMember"
+                                    value="yes"
+                                    checked={isPrimeMember === true}
+                                    onChange={() => setIsPrimeMember(true)}
                                     required
                                 />
-                            </div>
-                        )}
+                                <span>Yes</span>
+                            </label>
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="isPrimeMember"
+                                    value="no"
+                                    checked={isPrimeMember === false}
+                                    onChange={() => setIsPrimeMember(false)}
+                                    required
+                                />
+                                <span>No</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    {isPrimeMember && (
+                        <div className="form-row">
+                            <label htmlFor="primeId">Prime ID</label>
+                            <input
+                                type="text"
+                                id="primeId"
+                                name="primeId"
+                                placeholder="Enter your Prime ID"
+                                value={primeId}
+                                onChange={(e) => setPrimeId(e.target.value)}
+                                required
+                            />
+                        </div>
+                    )}
 
                     <div className="events-list1">
                         <h2 className='hd'>Select Events</h2>
