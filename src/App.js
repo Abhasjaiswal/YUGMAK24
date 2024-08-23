@@ -6,6 +6,7 @@ import Home from './Home/Home';
 import Persona from './persona/Persona'; 
 import Innovation from './Innovation/Innovation';
 import Registration from './Registration/Registration';
+import Sucess from './Registration/SuccessPage/Success'
 function App() {
   
   return (
@@ -20,6 +21,7 @@ function App() {
             {/* <Route path='/pixel-perfect' element={<PixelPerfect />} /> */}
             <Route path='/innovation' element={<Innovation />} />
             <Route path='/registration' element={<Registration />} />
+            <Route path='/success' element={<Sucess/>}/>
           </Routes>
         </BrowserRouter>
       
