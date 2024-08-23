@@ -6,7 +6,7 @@ const RegistrationAndEventSelection = () => {
     const [teamName, setTeamName] = useState('');
     const [leaderName, setLeaderName] = useState('');
     const [email, setEmail] = useState('');
-    const [rollNo, setRollNo] = useState('');
+    const [SapId, setSapId] = useState('');
     const [degree, setDegree] = useState('');
     const [year, setYear] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
@@ -15,6 +15,8 @@ const RegistrationAndEventSelection = () => {
     const [selectedEvents, setSelectedEvents] = useState([]);
     const [showPage2, setShowPage2] = useState(false);
     const [showPage3, setShowPage3] = useState(false);
+    const [isPrimeMember, setIsPrimeMember] = useState(false);
+    const [primeId, setPrimeId] = useState('');
 
     const events = [
         { name: 'Drishय', cost: 200 },
@@ -24,12 +26,14 @@ const RegistrationAndEventSelection = () => {
     ];
 
     const handleNext = () => {
-        if (!teamName || !leaderName || !email || !rollNo || !degree || !year || !phoneNumber || !altPhoneNumber || !strength || selectedEvents.length === 0) {
-            alert("Please fill out all the fields and select at least one event before proceeding.");
-            return;
-        }
-        setShowPage2(true);
-    };
+      if (!teamName || !leaderName || !email || !SapId || !degree || !year || !phoneNumber || !altPhoneNumber || !strength || selectedEvents.length === 0 || (isPrimeMember && !primeId)) {
+          alert("Please fill out all the fields and select at least one event before proceeding.");
+          return;
+      }
+      setShowPage2(true);
+  };
+  
+  
 
     const handleEventChange = (event) => {
         if (event === 'Drishय') {
@@ -54,8 +58,7 @@ const RegistrationAndEventSelection = () => {
     const [formData, setFormData] = useState(
         Array.from({ length: 6 }, () => ({
             name: '',
-            sapid: '',
-            rollNo: '',
+            SapId: '',
             year: '',
             degree: '',
             field: '',
@@ -70,15 +73,16 @@ const RegistrationAndEventSelection = () => {
     };
 
     const handleSubmit = () => {
-        const allFieldsFilled = formData.slice(0, parseInt(strength) - 1).every(member =>
-            Object.values(member).every(value => value !== '')
-        );
-        if (allFieldsFilled) {
-            setShowPage3(true);
-        } else {
-            alert('Please fill out all fields.');
-        }
-    };
+      const numMembers = parseInt(strength, 10) - 1;
+      const allFieldsFilled = formData.slice(0, numMembers).every(member =>
+          Object.values(member).every(value => value !== '')
+      );
+      if (allFieldsFilled) {
+          setShowPage3(true);
+      } else {
+          alert('Please fill out all fields.');
+      }
+  };
 
     const handlePrevious = () => {
         if (showPage3) {
@@ -155,14 +159,14 @@ const RegistrationAndEventSelection = () => {
                             />
                         </div>
                         <div className="form-row">
-                            <label htmlFor="rollNo">Roll no.</label>
+                            <label htmlFor="SapId">SAP ID</label>
                             <input
                                 type="text"
-                                id="rollNo"
-                                name="rollNo"
+                                id="SapId"
+                                name="SapId"
                                 placeholder="Of the Team Leader"
-                                value={rollNo}
-                                onChange={(e) => setRollNo(e.target.value)}
+                                value={SapId}
+                                onChange={(e) => setSapId(e.target.value)}
                                 required
                             />
                         </div>
@@ -222,6 +226,49 @@ const RegistrationAndEventSelection = () => {
                             />
                         </div>
                     </form>
+
+                    <div className="form-row">
+                            <label htmlFor="isPrimeMember">Are you a Prime Member?</label>
+                            <div className="radio-group">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="isPrimeMember"
+                                        value="yes"
+                                        checked={isPrimeMember === true}
+                                        onChange={() => setIsPrimeMember(true)}
+                                        required
+                                    />
+                                    <span>Yes</span>
+                                </label>
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="isPrimeMember"
+                                        value="no"
+                                        checked={isPrimeMember === false}
+                                        onChange={() => setIsPrimeMember(false)}
+                                        required
+                                    />
+                                    <span>No</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        {isPrimeMember && (
+                            <div className="form-row">
+                                <label htmlFor="primeId">Prime ID</label>
+                                <input
+                                    type="text"
+                                    id="primeId"
+                                    name="primeId"
+                                    placeholder="Enter your Prime ID"
+                                    value={primeId}
+                                    onChange={(e) => setPrimeId(e.target.value)}
+                                    required
+                                />
+                            </div>
+                        )}
 
                     <div className="events-list1">
                         <h2 className='hd'>Select Events</h2>
@@ -317,24 +364,14 @@ const RegistrationAndEventSelection = () => {
                                     <label>SAP ID</label>
                                     <input
                                         type="text"
-                                        name={`member-${index + 2}-sapid`}
+                                        name={`member-${index + 2}-SapId`}
                                         placeholder="Enter SAP ID"
-                                        value={formData[index].sapid}
-                                        onChange={(e) => handleChange(index, 'sapid', e.target.value)}
+                                        value={formData[index].SapId}
+                                        onChange={(e) => handleChange(index, 'SapId', e.target.value)}
                                         required
                                     />
                                 </div>
-                                <div className="form-row">
-                                    <label>Roll No.</label>
-                                    <input
-                                        type="text"
-                                        name={`member-${index + 2}-rollNo`}
-                                        placeholder="Enter Roll Number"
-                                        value={formData[index].rollNo}
-                                        onChange={(e) => handleChange(index, 'rollNo', e.target.value)}
-                                        required
-                                    />
-                                </div>
+
                                 <div className="form-row">
                                     <label>Degree</label>
                                     <select
@@ -365,11 +402,11 @@ const RegistrationAndEventSelection = () => {
                                     </select>
                                 </div>
                                 <div className="form-row">
-                                    <label>Field of Study</label>
+                                    <label>Phone Number</label>
                                     <input
                                         type="text"
                                         name={`member-${index + 2}-field`}
-                                        placeholder="Enter Field of Study"
+                                        placeholder="Phone Number"
                                         value={formData[index].field}
                                         onChange={(e) => handleChange(index, 'field', e.target.value)}
                                         required
@@ -405,8 +442,8 @@ const RegistrationAndEventSelection = () => {
                         <div className="step active">3. Payment</div>
                     </div>
 
-                    <h2 className='hd'>Select Events</h2>
-                    <p style={{ fontSize: '1.2rem', paddingBottom: '4vh' }}>Please confirm the events you want to participate in:</p>
+                    <h2 className='hd'>Preview & Payment</h2>
+                    <p style={{ fontSize: '1.2rem', paddingBottom: '4vh' }}>Please confirm the events</p>
                     <div className="events-list">
                         {selectedEvents.map((event, index) => (
                             <div key={index} className="event-item3">
