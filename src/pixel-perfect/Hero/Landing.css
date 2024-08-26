@@ -2,94 +2,94 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
 }
 
 .landing-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
     align-items: start;
     background-color: #F7CBA0;
     height: 100vh;
-    margin: 0;
-    margin-top: -30px;
-    margin-bottom: 30px;
-    padding: 0; 
+    padding: 0; /* Remove padding from the container */
     box-sizing: border-box;
     position: relative;
+    flex-wrap: wrap;
 }
 
-.left-column {
+.left-column, .right-column {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin-top: -2px; 
-}
-.section {
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    margin-top: 10px; 
 }
 
 .logo-section .logo {
     width: 300px;
     height: auto;
-    margin-top: -1px
+    margin-bottom: 20px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.logo-section .logo:hover {
+    transform: scale(1.1);
+}
+
+.description-section h1 {
+    margin: 10px 0;
+    font-family: 'Merriweather', serif; /* Desktop Heading Font */
+}
+
+.description-section h2, .description-section h4 {
+    margin: 10px 0;
+    font-family: 'Lato', sans-serif; /* Desktop Subheading Font */
 }
 
 .description-section p {
-    font-size: 20px;
-    text-align: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+    font-size: 18px;
     padding: 10px 20px;
-    position: relative; 
-    z-index: 1; 
     font-weight: 400;
-}
-.description-section h1{
-    font-size: 90px;
-}
-.button-section {
-    position: relative; 
-    z-index: 1; 
+    font-family: 'Lato', sans-serif; /* Desktop Body Text Font */
 }
 
 .button-section .register-button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1rem;
-    background-color: #ff5733;
+    background: linear-gradient(to right, #ff5733, #e74c3c);
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
-}
-.button-section .register-button:hover {
-    background-color: #e74c3c;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s, transform 0.3s;
+    font-family: 'Lato', sans-serif; /* Desktop Button Font */
 }
 
-.right-column {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-right: 20px;
+.button-section .register-button:hover {
+    background: linear-gradient(to right, #e74c3c, #ff5733);
+    transform: scale(1.05);
 }
 
 .right-column .image {
-    width: 100%;
+    max-width: 90%;
     height: auto;
     transform: rotate(-13deg);
     border-radius: 10px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.right-column .image:hover {
+    transform: rotate(0);
 }
 
 .abstract-section {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 200px;
     width: 100%;
     text-align: center;
     z-index: 0; 
@@ -98,46 +98,79 @@ html, body {
 .abstract-section .abstract-image {
     width: 100%;
     height: auto;
+    opacity: 0.9;
 }
+
 @media (max-width: 1122px) {
-    .abstract-section{
-        display: none; 
-    }
-}
-@media (max-width: 768px) {
+    /* Tablet-specific styling */
     .landing-container {
-        grid-template-columns: 1fr; 
-        align-items: flex-start; 
+        flex-direction: column; 
+        align-items: center; 
         height: auto;
-        padding: 10px;
+        padding: 20px;
     }
 
-    .left-column {
+    .left-column, .right-column {
+        flex: none; 
+        width: 100%;
+        text-align: center;
+    }
+
+    .logo-section .logo {
+        width: 250px;
+    }
+
+    .description-section h1 {
+        font-size: 4rem; /* Adjusted for better readability on tablets */
+        font-family: 'Poppins', sans-serif; /* Tablet Heading Font */
+    }
+
+    .description-section h2, .description-section h4 {
+        font-family: 'Poppins', sans-serif; /* Tablet Subheading Font */
+    }
+
+    .description-section p {
+        font-size: 1.2rem;
+        padding: 15px;
+        font-family: 'Poppins', sans-serif; /* Tablet Body Text Font */
+    }
+
+    .right-column .image {
+        width: 70%;
+        transform: rotate(0); /* Keep the image straight for tablets */
+    }
+
+    .abstract-section {
+        display: block; /* Display abstract section on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile-specific styling */
+    .landing-container {
+        flex-direction: column; 
+        height: auto;
         padding: 10px;
     }
 
     .logo-section .logo {
         width: 200px;
-        margin-top: 10px; 
     }
 
     .description-section h1 {
-        font-size: 3.7rem;
+        font-size: 3.5rem;
+        font-family: 'Nunito Sans', sans-serif; /* Mobile Heading Font */
     }
-    .description-section h2 {
-        font-size: 3rem;
-    }
-    .description-section h4 {
-        font-size: 2rem;
+    .description-section h2, .description-section h4 {
+        font-family: 'Nunito Sans', sans-serif; /* Mobile Subheading Font */
     }
     .description-section p {
         font-size: 1rem;
-        margin-top: 10px; 
+        font-family: 'Nunito Sans', sans-serif; /* Mobile Body Text Font */
     }
 
-    .right-column {
+    .right-column .image {
         width: 100%;
-        height: auto;
     }
 
     .abstract-section {
@@ -145,66 +178,50 @@ html, body {
     }
 }
 
-
-
-.animate-logo, .animate-heading1, .animate-heading2, .animate-heading3, .animate-paragraph, .animate-button {
+.animate-logo, .animate-heading1, .animate-heading2, .animate-heading3, .animate-paragraph, .animate-button, .animate-image {
     opacity: 0; 
     transform: translateY(20px); 
     animation-duration: 1s;
     animation-fill-mode: forwards; 
-  }
-  
-  @keyframes logoAnimation {
-    from {
-      opacity: 0;
-      transform: translateY(-50px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate-logo {
-    animation-name: logoAnimation;
-    animation-delay: 0.5s; 
-  }
-  
-  @keyframes headingAnimation {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  .animate-heading1 {
-    animation-name: headingAnimation;
-    animation-delay: 1s; 
-  }
-  
-  .animate-heading2 {
-    animation-name: headingAnimation;
-    animation-delay: 1.5s; 
-  }
-  
-  .animate-heading3 {
-    animation-name: headingAnimation;
-    animation-delay: 2s; 
-  }
+}
 
-  .animate-paragraph {
-    animation-name: headingAnimation;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-logo {
+    animation-name: fadeInUp;
+    animation-delay: 0.5s; 
+}
+
+.animate-heading1, .animate-image {
+    animation-name: fadeInUp;
+    animation-delay: 1s; 
+}
+
+.animate-heading2 {
+    animation-name: fadeInUp;
+    animation-delay: 1.5s; 
+}
+
+.animate-heading3 {
+    animation-name: fadeInUp;
+    animation-delay: 2s; 
+}
+
+.animate-paragraph {
+    animation-name: fadeInUp;
     animation-delay: 2.5s; 
-  }
-  
-  
-  .animate-button {
-    animation-name: headingAnimation;
+}
+
+.animate-button {
+    animation-name: fadeInUp;
     animation-delay: 3s;
-  }
-  
-  
+}
