@@ -6,7 +6,7 @@ import './CarouselSlider.css';
 
 const NextArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white bg-pink-600 p-3 rounded-full cursor-pointer hover:bg-pink-700 transition-transform duration-300 hover:scale-110 z-10"
+    className="absolute top-1/2 right-[-30px] transform -translate-y-1/2 text-white bg-pink-600 p-3 rounded-full cursor-pointer hover:bg-pink-700 transition-transform duration-300 hover:scale-110 z-10"
     onClick={onClick}
   >
     &gt;
@@ -15,7 +15,7 @@ const NextArrow = ({ onClick }) => (
 
 const PrevArrow = ({ onClick }) => (
   <div
-    className="absolute top-1/2 left-2 transform -translate-y-1/2 text-white bg-pink-600 p-3 rounded-full cursor-pointer hover:bg-pink-700 transition-transform duration-300 hover:scale-110 z-10"
+    className="absolute top-1/2 left-[-10px] transform -translate-y-1/2 text-white bg-pink-600 p-3 rounded-full cursor-pointer hover:bg-pink-700 transition-transform duration-300 hover:scale-110 z-10"
     onClick={onClick}
   >
     &lt;
@@ -91,7 +91,7 @@ const CarouselSlider = () => {
   ];
 
   return (
-    <div className="carousel-container w-full max-w-6xl mx-auto py-10">
+    <div className="carousel-container w-full max-w-6xl mx-auto  py-10">
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gray-800">Themes</h1>
       <Slider {...settings}>
         {images.map((image, index) => (
@@ -104,7 +104,7 @@ const CarouselSlider = () => {
               />
               <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition-opacity duration-500 text-white rounded-lg">
                 <h3 className="text-2xl font-semibold">{image.title}</h3>
-                <p className="mt-1 text-sm text-white ">{image.description}</p>
+                <p className="mt-1 text-md text-white ">{image.description}</p>
               </div>
             </div>
           </div>

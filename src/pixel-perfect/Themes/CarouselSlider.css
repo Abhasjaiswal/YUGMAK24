@@ -1,7 +1,7 @@
 .carousel-container {
-    width: 80%; 
+    width: 100%; 
     margin: auto;
-    padding: 40px 0;
+    padding: 50px 100px;
     position: relative;
     overflow: hidden; 
   }
@@ -16,6 +16,7 @@
   .slides-container {
     display: flex;
     transition: transform 0.5s ease-in-out; 
+    
   } 
   
   .slide {
@@ -55,6 +56,7 @@
     padding: 10px;
     border-radius: 5px;
     font-size: 1em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
   }
   
@@ -73,11 +75,11 @@
   }
   
   .arrow-left {
-    left: 10px;
+    left: 30px;
   }
   
   .arrow-right {
-    right: 1px;
+    right: 30px;
   }
   
   .arrow:hover {
