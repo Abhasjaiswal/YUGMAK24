@@ -20,7 +20,7 @@ function AboutEvent() {
           titleInView ? 'translate-y-0 opacity-100' : '-translate-y-10 opacity-0'
         } text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-800`}
       >
-        <h1 className="text-[36px] md:leading-[44px] font-clash-grotesk font-bold text-transparent bg-clip-text text-gray-900">
+        <h1 className="text-[36px] md:leading-[44px] font-clash-grotesk font-bold text-transparent bg-clip-text text-slate-900">
           About Drishय
         </h1>
       </div>
